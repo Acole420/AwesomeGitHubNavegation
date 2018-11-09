@@ -57,6 +57,7 @@ export default class HomeScreen extends React.Component {
         [{ text: "OK", onPress: () => console.log("OK Pressed") }],
         { cancelable: false }
       );
+      this.props.navigation.navigate('HolaStack')
       //IncorrectPass
       //}
       // if (Username === "adrian" && Password === "1998")
