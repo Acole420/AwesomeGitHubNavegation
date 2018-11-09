@@ -16,6 +16,7 @@ export default class App extends React.Component {
           onError={this._handleLoadingError}
           onFinish={this._handleFinishLoading}
         />
+       
       );
     } else {
       return (

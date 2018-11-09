@@ -12,6 +12,7 @@ import { WebBrowser } from 'expo';
 
 import { MonoText } from '../components/StyledText';
 
+
 export default class HolaScreen extends React.Component {
     static navigationOptions = {
         header: null,
@@ -19,11 +20,14 @@ export default class HolaScreen extends React.Component {
 
     render() {
         return (
+
+
             <View style={styles.container}>
-                <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
+                <ScrollView style={styles.containerhi} contentContainerStyle={styles.contentContainer}>
                     <View style={styles.welcomeContainer}>
 
                     </View>
+
 
                     <View style={styles.getStartedContainer}>
 
@@ -54,6 +58,7 @@ export default class HolaScreen extends React.Component {
                     </View>
                 </View>
             </View>
+
         );
     }
 
