@@ -15,7 +15,7 @@ import { WebBrowser } from 'expo';
 import { MonoText } from '../components/StyledText';
 import Button3 from "../components/Button3.js";
 
-export default class HolaScreen extends React.Component {
+export default class PrincipalScreen extends React.Component {
     static navigationOptions = {
         header: null,
     };
