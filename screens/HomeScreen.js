@@ -42,6 +42,7 @@ export default class HomeScreen extends React.Component {
   handleChange = Username => event => {
     this.setState({
       [Username]: event
+
     });
   };
 

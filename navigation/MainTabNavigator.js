@@ -3,10 +3,13 @@ import { Platform } from 'react-native';
 import { createStackNavigator, createBottomTabNavigator } from 'react-navigation';
 
 import TabBarIcon from '../components/TabBarIcon';
+import PrincipalScreen from '../screens/PrincipalScreen';
 import HomeScreen from '../screens/HomeScreen';
 import LinksScreen from '../screens/LinksScreen';
 import SettingsScreen from '../screens/SettingsScreen';
 import HolaScreen from '../screens/HolaScreen';
+
+
 
 
 const HomeStack = createStackNavigator({
@@ -26,6 +29,26 @@ HomeStack.navigationOptions = {
     />
   ),
 };
+
+const PrincipalStack = createStackNavigator({
+  Principal: PrincipalScreen,
+});
+
+PrincipalStack.navigationOptions = {
+  tabBarLabel: 'Pantalla',
+  tabBarIcon: ({ focused }) => (
+    <TabBarIcon
+      focused={focused}
+      name={
+        Platform.OS === 'ios'
+          ? `ios-information-circle${focused ? '' : '-outline'}`
+          : 'md-information-circle'
+      }
+    />
+  ),
+};
+
+
 const HolaStack = createStackNavigator({
   Hola: HolaScreen,
 });
@@ -73,7 +96,9 @@ SettingsStack.navigationOptions = {
 };
 
 export default createBottomTabNavigator({
+
   HomeStack,
+  PrincipalStack,
   LinksStack,
   SettingsStack,
   HolaStack
